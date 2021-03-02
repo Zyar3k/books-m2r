@@ -1,6 +1,6 @@
 import styles from "./SortList.module.scss";
 
-const SortList = (closeMobileMenu) => {
+const SortList = ({ closeMobileMenu }) => {
   return (
     <>
       <li onClick={closeMobileMenu} className={styles.navItem}>

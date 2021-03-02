@@ -29,7 +29,7 @@ const Header = () => {
         >
           <SortList closeMobileMenu={closeMobileMenu} />
         </ul>
-        <BurgerMenu mobileMenuToggle={mobileMenuToggle} click={click} />
+        <BurgerMenu mobileMenuToggle={mobileMenuToggle} toggleMen={click} />
       </div>
     </header>
   );

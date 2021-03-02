@@ -12,7 +12,20 @@ footer {
 
   .footer {
     height: 30px;
+    padding: 0 10px;
     margin: 0 auto;
     max-width: 1280px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .contactShort {
+      display: flex;
+
+      i {
+        margin-left: 10px;
+      }
+    }
   }
 }
