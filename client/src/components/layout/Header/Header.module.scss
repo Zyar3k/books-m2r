@@ -1,0 +1,118 @@
+@import "../../../styles/settings.scss";
+
+header {
+  width: 100vw;
+  color: white;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+
+  .header {
+    height: 60px;
+    margin: 0 auto;
+    max-width: 1280px;
+
+    display: flex;
+
+    .logoWrapper {
+      // border: 1px solid white;
+      height: 100%;
+      width: 240px;
+      font-family: $logo-font;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      p {
+        span {
+          color: red;
+        }
+      }
+    }
+
+    .navWrapper {
+      display: flex;
+      flex: 1;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.burgerWrapper {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  header {
+    .header {
+      height: 60px;
+      margin: 0 auto;
+      max-width: 1280px;
+
+      display: flex;
+
+      .logoWrapper {
+        // border: 1px solid white;
+        // height: 100%;
+        // width: 240px;
+        // font-family: $logo-font;
+
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // font-size: 30px;
+        // p {
+        //   span {
+        //     color: red;
+        //   }
+        // }
+      }
+
+      .navWrapper {
+        // display: flex;
+        // flex: 1;
+
+        flex-direction: column;
+        width: 70%;
+        justify-content: space-evenly;
+
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+
+        position: absolute;
+        top: 60px;
+        background-color: black;
+        height: calc(100vh - 90px);
+
+        &.active {
+          left: 0;
+          opacity: 1;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+
+  .burgerWrapper {
+    border: 3px solid white;
+    width: 41px;
+    height: 41px;
+    margin: 9px;
+    border-radius: 12px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

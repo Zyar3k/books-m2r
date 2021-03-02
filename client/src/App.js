@@ -9,8 +9,10 @@ const App = () => {
   return (
     <StoreProvider>
       <Header />
-      <Sidebar />
-      <MainView />
+      <div className='contentContainer'>
+        <Sidebar />
+        <MainView />
+      </div>
       <Footer />
     </StoreProvider>
   );

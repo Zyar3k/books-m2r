@@ -1,0 +1,19 @@
+@import "../../../styles/settings.scss";
+
+aside {
+  background-color: red;
+  color: white;
+
+  width: 240px;
+
+  position: fixed;
+  top: 60px;
+  height: calc(100vh - 90px);
+}
+
+@media (max-width: 992px) {
+  aside {
+    position: unset;
+    width: 100%;
+  }
+}

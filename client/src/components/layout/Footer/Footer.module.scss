@@ -1,0 +1,18 @@
+@import "../../../styles/settings.scss";
+
+footer {
+  width: 100vw;
+  color: white;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+
+  .footer {
+    height: 30px;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+}

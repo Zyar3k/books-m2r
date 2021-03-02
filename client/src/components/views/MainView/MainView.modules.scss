@@ -1,0 +1,13 @@
+@import "../../../styles/settings.scss";
+
+main {
+  // margin-top: 60px;
+  margin-left: 240px;
+}
+
+@media (max-width: 992px) {
+  main {
+    // margin-top: 60px;
+    margin-left: 0;
+  }
+}

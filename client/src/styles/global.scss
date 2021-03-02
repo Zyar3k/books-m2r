@@ -1,0 +1,32 @@
+@import "./settings.scss";
+@import "./typography.scss";
+@import "./normalize.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.contentContainer {
+  border: 1px dashed red;
+  margin: 0 auto;
+  max-width: 1280px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+
+  display: flex;
+  min-height: calc(100vh - 90px);
+}
+
+@media (max-width: 992px) {
+  .contentContainer {
+    flex-direction: column-reverse;
+  }
+}
