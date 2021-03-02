@@ -37,17 +37,8 @@ header {
       display: flex;
       flex: 1;
       justify-content: space-evenly;
-
-      .navItem {
-        border: 1px solid white;
-        width: 100%;
-      }
     }
   }
-}
-
-.burgerWrapper {
-  display: none;
 }
 
 @media (max-width: 992px) {
@@ -77,10 +68,6 @@ header {
         height: calc(100vh - 90px);
         z-index: 100;
 
-        .navItem {
-          height: 100%;
-        }
-
         &.active {
           left: 0;
           opacity: 1;
@@ -88,23 +75,5 @@ header {
         }
       }
     }
-  }
-
-  .burgerWrapper {
-    border: 3px solid white;
-    width: 41px;
-    height: 41px;
-    margin: 9px;
-    border-radius: 12px;
-
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
   }
 }

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import BurgerMenu from "../../features/BurgerMenu/BurgerMenu";
+import SortList from "../../features/SortList/SortList";
 
 import styles from "./Header.module.scss";
 
@@ -25,29 +27,9 @@ const Header = () => {
               : `${styles.navWrapper}`
           }
         >
-          <li onClick={closeMobileMenu} className={styles.navItem}>
-            m2r
-          </li>
-          <li onClick={closeMobileMenu} className={styles.navItem}>
-            amazon
-          </li>
-          <li onClick={closeMobileMenu} className={styles.navItem}>
-            bbc
-          </li>
-          <li onClick={closeMobileMenu} className={styles.navItem}>
-            empik
-          </li>
-          <li onClick={closeMobileMenu} className={styles.navItem}>
-            gandalf
-          </li>
-          <li onClick={closeMobileMenu} className={styles.navItem}>
-            pozycje
-          </li>
+          <SortList closeMobileMenu={closeMobileMenu} />
         </ul>
-
-        <div className={styles.burgerWrapper} onClick={mobileMenuToggle}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
-        </div>
+        <BurgerMenu mobileMenuToggle={mobileMenuToggle} click={click} />
       </div>
     </header>
   );

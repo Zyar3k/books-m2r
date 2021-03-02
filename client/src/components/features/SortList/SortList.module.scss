@@ -1,0 +1,12 @@
+@import "../../../styles/settings.scss";
+
+.navItem {
+  border: 1px solid white;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .navItem {
+    height: 100%;
+  }
+}
