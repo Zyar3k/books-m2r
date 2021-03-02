@@ -1,8 +1,10 @@
+import StoreProvider from "./store/StoreProvider";
+
 const App = () => {
   return (
-    <div>
+    <StoreProvider>
       <h1>BOOKS must2read</h1>
-    </div>
+    </StoreProvider>
   );
 };
 
