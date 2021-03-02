@@ -14,6 +14,19 @@ body {
   scroll-behavior: smooth;
 }
 
+main {
+  // margin-top: 60px;
+  margin-left: 240px;
+  min-height: calc(100vh - 90px);
+}
+
+@media (max-width: 992px) {
+  main {
+    // margin-top: 60px;
+    margin-left: 0;
+  }
+}
+
 .contentContainer {
   border: 1px dashed red;
   margin: 0 auto;

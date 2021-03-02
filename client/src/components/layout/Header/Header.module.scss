@@ -18,7 +18,6 @@ header {
     display: flex;
 
     .logoWrapper {
-      // border: 1px solid white;
       height: 100%;
       width: 240px;
       font-family: $logo-font;
@@ -38,6 +37,11 @@ header {
       display: flex;
       flex: 1;
       justify-content: space-evenly;
+
+      .navItem {
+        border: 1px solid white;
+        width: 100%;
+      }
     }
   }
 }
@@ -56,26 +60,9 @@ header {
       display: flex;
 
       .logoWrapper {
-        // border: 1px solid white;
-        // height: 100%;
-        // width: 240px;
-        // font-family: $logo-font;
-
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // font-size: 30px;
-        // p {
-        //   span {
-        //     color: red;
-        //   }
-        // }
       }
 
       .navWrapper {
-        // display: flex;
-        // flex: 1;
-
         flex-direction: column;
         width: 70%;
         justify-content: space-evenly;
@@ -88,6 +75,11 @@ header {
         top: 60px;
         background-color: black;
         height: calc(100vh - 90px);
+        z-index: 100;
+
+        .navItem {
+          height: 100%;
+        }
 
         &.active {
           left: 0;

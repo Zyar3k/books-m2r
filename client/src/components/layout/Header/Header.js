@@ -6,6 +6,7 @@ const Header = () => {
   const [click, setClick] = useState(false);
 
   const mobileMenuToggle = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
   return (
     <header>
@@ -24,12 +25,24 @@ const Header = () => {
               : `${styles.navWrapper}`
           }
         >
-          <li className={styles.navItem}>m2r</li>
-          <li className={styles.navItem}>amazon</li>
-          <li className={styles.navItem}>bbc</li>
-          <li className={styles.navItem}>empik</li>
-          <li className={styles.navItem}>gandalf</li>
-          <li className={styles.navItem}>pozycje</li>
+          <li onClick={closeMobileMenu} className={styles.navItem}>
+            m2r
+          </li>
+          <li onClick={closeMobileMenu} className={styles.navItem}>
+            amazon
+          </li>
+          <li onClick={closeMobileMenu} className={styles.navItem}>
+            bbc
+          </li>
+          <li onClick={closeMobileMenu} className={styles.navItem}>
+            empik
+          </li>
+          <li onClick={closeMobileMenu} className={styles.navItem}>
+            gandalf
+          </li>
+          <li onClick={closeMobileMenu} className={styles.navItem}>
+            pozycje
+          </li>
         </ul>
 
         <div className={styles.burgerWrapper} onClick={mobileMenuToggle}>
