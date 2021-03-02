@@ -1,9 +1,17 @@
+import Header from "./components/layout/Header/Header";
+import Footer from "./components/layout/Footer/Footer";
+import Sidebar from "./components/layout/Sidebar/Sidebar";
+import MainView from "./components/views/MainView/MainView";
+
 import StoreProvider from "./store/StoreProvider";
 
 const App = () => {
   return (
     <StoreProvider>
-      <h1>BOOKS must2read</h1>
+      <Header />
+      <Sidebar />
+      <MainView />
+      <Footer />
     </StoreProvider>
   );
 };

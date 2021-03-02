@@ -9,7 +9,6 @@ const StoreProvider = ({ children }) => {
 
   const fetchData = async () => {
     const { data } = await request.get("/books");
-    console.log(data);
     setBooks(data);
   };
 
