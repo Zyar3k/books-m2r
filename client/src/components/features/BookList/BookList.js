@@ -1,4 +1,5 @@
 import BookTile from "../BookTile/BookTile";
+import Loader from "../Loader/Loader";
 
 import styles from "./BookList.module.scss";
 
@@ -6,7 +7,7 @@ const BookList = ({ books }) => {
   return (
     <section className={styles.bookList}>
       {books.length === 0 ? (
-        "Wczytuję"
+        <Loader />
       ) : (
         <>
           {books.map((books) => (

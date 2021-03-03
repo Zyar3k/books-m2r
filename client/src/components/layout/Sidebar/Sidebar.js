@@ -8,7 +8,6 @@ const Sidebar = () => {
       <div className={styles.sidebar}>
         <SortList />
         <FilterModule />
-        <p>Sidebar</p>
       </div>
     </aside>
   );
