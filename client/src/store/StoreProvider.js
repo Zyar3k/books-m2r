@@ -7,6 +7,8 @@ export const StoreContext = createContext();
 const StoreProvider = ({ children }) => {
   const [books, setBooks] = useState([]);
   const [select, setSelect] = useState("all");
+  const [isPageShow, setIsPageShow] = useState(false);
+  // const [isReaded, setIsReaded] = useState();
 
   const fetchData = async () => {
     const { data } = await request.get("/books");
@@ -17,7 +19,18 @@ const StoreProvider = ({ children }) => {
     fetchData();
   }, []);
   return (
-    <StoreContext.Provider value={{ books, setBooks, select, setSelect }}>
+    <StoreContext.Provider
+      value={{
+        books,
+        setBooks,
+        select,
+        setSelect,
+        isPageShow,
+        setIsPageShow,
+        // isReaded,
+        // setIsReaded,
+      }}
+    >
       {children}
     </StoreContext.Provider>
   );

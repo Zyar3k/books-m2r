@@ -5,7 +5,9 @@ import { StoreContext } from "../../../store/StoreProvider";
 import styles from "./SortList.module.scss";
 
 const SortList = () => {
-  const { books, setBooks } = useContext(StoreContext);
+  const { books, setBooks, isPageShow, setIsPageShow } = useContext(
+    StoreContext
+  );
 
   const sortByPage = (e) => {
     if (e.target.value === "up") {
@@ -19,6 +21,7 @@ const SortList = () => {
       });
       setBooks(sorted);
     }
+    setIsPageShow(true);
   };
 
   const sortByAuthor = (e) => {
@@ -48,6 +51,7 @@ const SortList = () => {
       });
       setBooks(sorted);
     }
+    setIsPageShow(false);
   };
 
   return (

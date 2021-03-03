@@ -1,0 +1,17 @@
+@import "../../../styles/settings.scss";
+
+.bookTile {
+  // border: 1px dashed black;
+  box-shadow: 1px 1px 4px rgba(26, 26, 26, 0.5);
+  width: 45%;
+  margin: 10px;
+  padding: 4px;
+  min-height: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}

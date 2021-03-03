@@ -27,15 +27,27 @@ const MainView = () => {
       case "pozy":
         books = books.filter((book) => book.pozy === true);
         return <BookList books={books} />;
+      case "readed":
+        books = books.filter((book) => book.readed === true);
+        return <BookList books={books} />;
+      case "unreaded":
+        books = books.filter((book) => book.readed !== true);
+        return <BookList books={books} />;
+      case "available":
+        books = books.filter((book) => book.available === true);
+        return <BookList books={books} />;
+      case "unavailable":
+        books = books.filter((book) => book.available !== true);
+        return <BookList books={books} />;
       default:
         break;
     }
   };
 
   return (
-    <>
+    <main>
       <div className={styles.mainView}>{bookList()}</div>
-    </>
+    </main>
   );
 };
 

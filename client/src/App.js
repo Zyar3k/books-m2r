@@ -15,10 +15,8 @@ const App = () => {
       <div className='contentContainer'>
         <Sidebar />
         <Switch>
-          <main>
-            <Route exact path='/' component={MainView} />
-            <Route path='/book/:id' component={BookExtension} />
-          </main>
+          <Route exact path='/' component={MainView} />
+          <Route path='/book/:id' component={BookExtension} />
         </Switch>
       </div>
       <Footer />

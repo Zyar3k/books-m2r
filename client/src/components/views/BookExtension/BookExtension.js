@@ -1,8 +1,8 @@
 const BookExtension = () => {
   return (
-    <>
+    <main>
       <p>BookExtension</p>
-    </>
+    </main>
   );
 };
 
