@@ -1,6 +1,6 @@
 import { useState } from "react";
 import BurgerMenu from "../../features/BurgerMenu/BurgerMenu";
-import SortList from "../../features/SortList/SortList";
+import ListFilter from "../../features/ListFilter/ListFilter";
 
 import styles from "./Header.module.scss";
 
@@ -27,7 +27,7 @@ const Header = () => {
               : `${styles.navWrapper}`
           }
         >
-          <SortList closeMobileMenu={closeMobileMenu} />
+          <ListFilter closeMobileMenu={closeMobileMenu} />
         </ul>
         <BurgerMenu mobileMenuToggle={mobileMenuToggle} toggleMen={click} />
       </div>

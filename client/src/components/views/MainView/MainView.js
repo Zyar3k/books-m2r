@@ -6,13 +6,35 @@ import BookList from "../../features/BookList/BookList";
 import styles from "./MainView.modules.scss";
 
 const MainView = () => {
-  const { books } = useContext(StoreContext);
+  let { books, select } = useContext(StoreContext);
+
+  const bookList = () => {
+    switch (select) {
+      case "all":
+        return <BookList books={books} />;
+      case "ama":
+        books = books.filter((book) => book.ama === true);
+        return <BookList books={books} />;
+      case "bbc":
+        books = books.filter((book) => book.bbc === true);
+        return <BookList books={books} />;
+      case "emp":
+        books = books.filter((book) => book.emp === true);
+        return <BookList books={books} />;
+      case "gan":
+        books = books.filter((book) => book.bbc === true);
+        return <BookList books={books} />;
+      case "pozy":
+        books = books.filter((book) => book.pozy === true);
+        return <BookList books={books} />;
+      default:
+        break;
+    }
+  };
 
   return (
     <>
-      <div className={styles.mainView}>
-        <BookList books={books} />
-      </div>
+      <div className={styles.mainView}>{bookList()}</div>
     </>
   );
 };

@@ -1,6 +1,14 @@
-import styles from "./SortList.module.scss";
+import { useContext } from "react";
 
-const SortList = ({ closeMobileMenu }) => {
+import { StoreContext } from "../../../store/StoreProvider";
+
+import styles from "./ListFilter.module.scss";
+
+const ListFilter = ({ closeMobileMenu }) => {
+  const { setSelect } = useContext(StoreContext);
+  const handleBookFilter = (option) => {
+    setSelect(option);
+  };
   return (
     <>
       <li onClick={closeMobileMenu} className={styles.navItem}>
@@ -9,7 +17,13 @@ const SortList = ({ closeMobileMenu }) => {
           className={`${styles.radio} ${styles.radioBefore}`}
         >
           <span className={styles.radioInput}>
-            <input type='radio' name='listSelect' id='all' defaultChecked />
+            <input
+              type='radio'
+              name='listSelect'
+              id='all'
+              defaultChecked
+              onClick={() => handleBookFilter("all")}
+            />
             <span className={styles.radioControl}></span>
           </span>
           <span className={styles.radioLabel}>B2R</span>
@@ -21,7 +35,12 @@ const SortList = ({ closeMobileMenu }) => {
           className={`${styles.radio} ${styles.radioBefore}`}
         >
           <span className={styles.radioInput}>
-            <input type='radio' name='listSelect' id='ama' />
+            <input
+              type='radio'
+              name='listSelect'
+              id='ama'
+              onClick={() => handleBookFilter("ama")}
+            />
             <span className={styles.radioControl}></span>
           </span>
           <span className={styles.radioLabel}>Amazon</span>
@@ -33,7 +52,12 @@ const SortList = ({ closeMobileMenu }) => {
           className={`${styles.radio} ${styles.radioBefore}`}
         >
           <span className={styles.radioInput}>
-            <input type='radio' name='listSelect' id='bbc' />
+            <input
+              type='radio'
+              name='listSelect'
+              id='bbc'
+              onClick={() => handleBookFilter("bbc")}
+            />
             <span className={styles.radioControl}></span>
           </span>
           <span className={styles.radioLabel}>BBC</span>
@@ -45,7 +69,12 @@ const SortList = ({ closeMobileMenu }) => {
           className={`${styles.radio} ${styles.radioBefore}`}
         >
           <span className={styles.radioInput}>
-            <input type='radio' name='listSelect' id='emp' />
+            <input
+              type='radio'
+              name='listSelect'
+              id='emp'
+              onClick={() => handleBookFilter("emp")}
+            />
             <span className={styles.radioControl}></span>
           </span>
           <span className={styles.radioLabel}>Empik</span>
@@ -57,7 +86,12 @@ const SortList = ({ closeMobileMenu }) => {
           className={`${styles.radio} ${styles.radioBefore}`}
         >
           <span className={styles.radioInput}>
-            <input type='radio' name='listSelect' id='gan' />
+            <input
+              type='radio'
+              name='listSelect'
+              id='gan'
+              onClick={() => handleBookFilter("gan")}
+            />
             <span className={styles.radioControl}></span>
           </span>
           <span className={styles.radioLabel}>Gandalf</span>
@@ -69,7 +103,12 @@ const SortList = ({ closeMobileMenu }) => {
           className={`${styles.radio} ${styles.radioBefore}`}
         >
           <span className={styles.radioInput}>
-            <input type='radio' name='listSelect' id='pozy' />
+            <input
+              type='radio'
+              name='listSelect'
+              id='pozy'
+              onClick={() => handleBookFilter("pozy")}
+            />
             <span className={styles.radioControl}></span>
           </span>
           <span className={styles.radioLabel}>Pozycje</span>
@@ -79,4 +118,4 @@ const SortList = ({ closeMobileMenu }) => {
   );
 };
 
-export default SortList;
+export default ListFilter;
