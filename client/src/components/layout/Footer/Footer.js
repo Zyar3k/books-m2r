@@ -1,39 +1,51 @@
 import { useState } from "react";
+import FilterModule from "../../features/FilterModule/FilterModule";
+import SortList from "../../features/SortList/SortList";
 
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
-  const [isFilter, setIsFilter] = useState(false);
+  const [isSorted, setIsSorted] = useState(false);
+  const [isFiltered, setIsFiltered] = useState(false);
 
-  const filterToggle = () => setIsFilter(!isFilter);
+  const sortToggle = () => setIsSorted(!isSorted);
+  const filterToggle = () => setIsFiltered(!isFiltered);
   return (
     <footer>
-      {isFilter ? (
+      {isSorted ? (
         <div className={styles.filterIsOn}>
-          <div className={styles.filtrWrapper}>
-            <i className='fas fa-chevron-up'></i>
-            <p>Sortuj po nazwisku</p>
-            <i className='fas fa-chevron-down'></i>
-          </div>
-          <div className={styles.filtrWrapper}>
-            <i className='fas fa-chevron-up'></i>
-            <p>Sortuj po imieniu</p>
-            <i className='fas fa-chevron-down'></i>
-          </div>
-          <div className={styles.filtrWrapper}>
-            <i className='fas fa-chevron-up'></i>
-            <p>Sortuj po ilości stron</p>
-            <i className='fas fa-chevron-down'></i>
-          </div>
+          <SortList />
+        </div>
+      ) : null}
+      {isFiltered ? (
+        <div className={styles.filterIsOn}>
+          <FilterModule />
         </div>
       ) : null}
       <div className={styles.footer}>
-        <p>@Zyar3k 2021</p>
-        <p className={styles.filterToggle} onClick={filterToggle}>
-          Filtruj
+        <p>
+          @Zyar3k
+          <span>2021</span>
         </p>
+        <button
+          disabled={isFiltered ? true : false}
+          className={styles.filterToggle}
+          onClick={sortToggle}
+        >
+          Sortuj
+        </button>
+        <button
+          disabled={isSorted ? true : false}
+          className={styles.filterToggle}
+          onClick={filterToggle}
+        >
+          Filtruj
+        </button>
         <div className={styles.contactShort}>
-          <p>Masz uwagi? Napisz:</p>
+          <p>
+            <span>Masz uwagi?</span>
+            Napisz:
+          </p>
           <i className='fas fa-envelope'></i>
         </div>
       </div>

@@ -1,8 +1,70 @@
 @import "../../../styles/settings.scss";
 
-.filtrRow {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 10px;
+section {
+  h3 {
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease 0.4s;
+
+    &:hover {
+      letter-spacing: 1px;
+    }
+  }
+
+  .filtrRow {
+    width: 100%;
+    padding: 10px;
+
+    .radioGroup {
+      justify-content: space-between;
+      width: 100%;
+      display: flex;
+      position: relative;
+      &.fullList {
+        p {
+          font-weight: bold;
+          letter-spacing: 2px;
+          font-size: 20px;
+        }
+      }
+
+      p {
+        display: flex;
+        z-index: 10;
+        align-items: center;
+        height: 24px;
+      }
+      .radio {
+        width: 10%;
+
+        input {
+          display: none;
+          background: red;
+        }
+
+        .newInput {
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          border: 2px solid black;
+
+          &::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+          }
+        }
+
+        input[type="radio"]:checked ~ .newInput::after {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
 }

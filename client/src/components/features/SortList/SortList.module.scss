@@ -1,6 +1,16 @@
 @import "../../../styles/settings.scss";
 
 .filterIsOn {
+  h3 {
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease 0.4s;
+
+    &:hover {
+      letter-spacing: 1px;
+    }
+  }
   .filtrWrapper {
     display: flex;
     justify-content: space-between;

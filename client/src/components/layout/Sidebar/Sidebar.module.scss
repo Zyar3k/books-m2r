@@ -15,5 +15,12 @@ aside {
   aside {
     position: unset;
     width: 100%;
+
+    .sidebar {
+      width: 60%;
+      margin: 0 auto;
+      // border: 1px solid black;
+      // background: black;
+    }
   }
 }

@@ -23,6 +23,10 @@ footer {
     align-items: center;
     justify-content: space-between;
 
+    p span {
+      margin: 4px;
+    }
+
     .filterToggle {
       display: none;
     }
@@ -44,22 +48,12 @@ footer {
       padding: 0;
       display: flex;
       justify-content: center;
-      background: red;
+      background: rgba(26, 26, 26, 0.9);
       position: absolute;
       width: 100%;
       bottom: 30px;
-      // height: 80px;git add .
-
       display: flex;
       flex-direction: column;
-
-      .filtrWrapper {
-        display: flex;
-        justify-content: space-between;
-        i {
-          width: 10%;
-        }
-      }
     }
     .footer {
       height: 30px;
@@ -71,15 +65,28 @@ footer {
       align-items: center;
       justify-content: space-between;
 
+      p span {
+        display: none;
+      }
+
       .filterToggle {
         display: flex;
+        cursor: pointer;
+        background: none;
+        color: white;
+        border: none;
+        outline: none;
+
+        &:active {
+          text-shadow: 0 0 2px white;
+        }
+
+        &:disabled {
+          color: grey;
+        }
       }
       .contactShort {
         display: flex;
-
-        p {
-          display: none;
-        }
 
         i {
           margin-left: 10px;
