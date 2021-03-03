@@ -21,17 +21,64 @@ const SortList = () => {
     }
   };
 
+  const sortByAuthor = (e) => {
+    if (e.target.value === "up") {
+      const sorted = [...books].sort((a, b) => {
+        if (e.target.name === "lastName") {
+          a = a.author.lastName;
+          b = b.author.lastName;
+        } else {
+          a = a.author.name;
+          b = b.author.name;
+        }
+        return a.localeCompare(b);
+      });
+      setBooks(sorted);
+    } else if (e.target.value === "down") {
+      const sorted = [...books].sort((a, b) => {
+        if (e.target.name === "lastName") {
+          a = a.author.lastName;
+          b = b.author.lastName;
+        } else {
+          a = a.author.name;
+          b = b.author.name;
+        }
+
+        return b.localeCompare(a);
+      });
+      setBooks(sorted);
+    }
+  };
+
   return (
     <div className={styles.filterIsOn}>
       <div className={styles.filtrWrapper}>
-        <i className='fas fa-chevron-up'></i>
+        <button
+          onClick={sortByAuthor}
+          className='fas fa-chevron-up'
+          name='lastName'
+          value='up'
+        ></button>
         <p>Sortuj po nazwisku</p>
-        <i className='fas fa-chevron-down'></i>
+        <button
+          onClick={sortByAuthor}
+          className='fas fa-chevron-down'
+          name='lastName'
+          value='down'
+        ></button>
       </div>
       <div className={styles.filtrWrapper}>
-        <i className='fas fa-chevron-up'></i>
+        <button
+          onClick={sortByAuthor}
+          className='fas fa-chevron-up'
+          value='up'
+        ></button>
         <p>Sortuj po imieniu</p>
-        <i className='fas fa-chevron-down'></i>
+        <button
+          onClick={sortByAuthor}
+          className='fas fa-chevron-down'
+          value='down'
+        ></button>
       </div>
       <div className={styles.filtrWrapper}>
         <button
