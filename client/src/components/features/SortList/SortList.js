@@ -69,7 +69,7 @@ const SortList = () => {
               name='lastName'
               value='up'
             ></button>
-            <p>Sortuj po nazwisku</p>
+            <p>Po nazwisku</p>
             <button
               onClick={sortByAuthor}
               className='fas fa-chevron-down'
@@ -83,7 +83,7 @@ const SortList = () => {
               className='fas fa-chevron-up'
               value='up'
             ></button>
-            <p>Sortuj po imieniu</p>
+            <p>Po imieniu</p>
             <button
               onClick={sortByAuthor}
               className='fas fa-chevron-down'
@@ -96,7 +96,7 @@ const SortList = () => {
               onClick={sortByPage}
               value='up'
             ></button>
-            <p>Sortuj po ilości stron</p>
+            <p>Po ilości stron</p>
             <button
               className='fas fa-chevron-down'
               onClick={sortByPage}

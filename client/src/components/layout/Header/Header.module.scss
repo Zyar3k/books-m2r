@@ -4,6 +4,10 @@ header {
   width: 100vw;
   color: white;
   background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
   position: fixed;
   top: 0;
   left: 0;

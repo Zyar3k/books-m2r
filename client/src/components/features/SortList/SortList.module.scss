@@ -14,13 +14,26 @@
   .filtrWrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    // border: 1px solid black;
     padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    &:first-of-type {
+      border-top: 1px solid rgba(0, 0, 0, 0.3);
+    }
 
     button {
-      border: 1px solid black;
+      border: 2px solid black;
       padding: 4px;
+
+      background: inherit;
+      width: 24px;
+      height: 24px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
