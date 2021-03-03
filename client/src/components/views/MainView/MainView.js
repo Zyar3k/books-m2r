@@ -1,11 +1,17 @@
+import { useContext } from "react";
+
+import { StoreContext } from "../../../store/StoreProvider";
+import BookList from "../../features/BookList/BookList";
+
 import styles from "./MainView.modules.scss";
 
 const MainView = () => {
+  const { books } = useContext(StoreContext);
+
   return (
     <>
       <div className={styles.mainView}>
-        <p>MainView</p>
-        <p>inima eius aperiam nulla sequi? Voluptas, porro?</p>
+        <BookList books={books} />
       </div>
     </>
   );

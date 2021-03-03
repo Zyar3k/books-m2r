@@ -29,7 +29,9 @@ const Footer = () => {
       ) : null}
       <div className={styles.footer}>
         <p>@Zyar3k 2021</p>
-        <p onClick={filterToggle}>Filtruj</p>
+        <p className={styles.filterToggle} onClick={filterToggle}>
+          Filtruj
+        </p>
         <div className={styles.contactShort}>
           <p>Masz uwagi? Napisz:</p>
           <i className='fas fa-envelope'></i>

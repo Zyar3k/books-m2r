@@ -3,6 +3,19 @@
 .navItem {
   border: 1px solid white;
   width: 100%;
+
+  list-style: none;
+
+  label {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin-right: 10px;
+    }
+  }
 }
 
 @media (max-width: 992px) {
