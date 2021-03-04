@@ -1,5 +1,7 @@
 import { useHistory } from "react-router-dom";
 
+import StarRanking from "../StarRanking/StarRanking";
+
 import lcLogo from "../../../images/lc-logo.png";
 import imgRead from "../../../images/read-svg-png.png";
 import imgAva from "../../../images/wood_hand_kindle_en.png";
@@ -37,7 +39,7 @@ const BookContent = ({ book }) => {
   return (
     <div className={styles.bookContentWrapper}>
       <div className={styles.bookContent}>
-        <div className={styles.stars}>*****</div>
+        <StarRanking book={book} />
         <h2 className={styles.bookTitle}>{title}</h2>
         <em className={styles.bookAuthor}>
           {name}&nbsp;{lastName}

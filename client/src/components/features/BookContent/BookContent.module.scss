@@ -40,12 +40,8 @@
   padding: 10px;
   letter-spacing: 2px;
   text-align: center;
-  .stars {
-    // border: 1px dotted red;
-  }
 
   .bookTitle {
-    // border: 1px dotted red;
     letter-spacing: 4px;
     padding: 0 14px;
 
@@ -53,17 +49,16 @@
     color: $fontLightColor;
   }
   .bookAuthor {
-    // border: 1px dotted red;
     font-size: 26px;
   }
   .pageWrapper {
-    // border: 1px dotted red;
     display: flex;
     width: 60%;
+
+    align-items: center;
     h4 {
       width: 50%;
       padding: 10px 4px;
-      // border: 1px dotted red;
       span {
         margin-left: 10px;
         letter-spacing: 4px;
@@ -77,6 +72,7 @@
     position: relative;
     overflow: hidden;
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+    text-decoration: none;
     p {
       color: $fontLightColor;
       margin-bottom: 10px;
@@ -93,17 +89,20 @@
       transform: rotate(20deg);
       transition: transform 0.4s;
     }
-    &:hover:after {
-      transform: translateX(420px) rotate(20deg);
+    &:hover {
+      p {
+        color: #fff;
+      }
+      &:after {
+        transform: translateX(420px) rotate(20deg);
+      }
     }
   }
 
   .wrapperOnList {
-    // border: 1px dotted red;
     display: flex;
 
     .listCheck {
-      // border: 1px dotted red;
       height: 50px;
       width: 146px;
 
@@ -121,13 +120,11 @@
   }
 
   .bottomWrapper {
-    // border: 1px dotted red;
     display: flex;
     align-items: center;
     width: 60%;
     justify-content: space-between;
     .myInfoWrapper {
-      // border: 1px dotted red;
       height: 60px;
       width: 160px;
       display: flex;
@@ -144,7 +141,6 @@
     }
 
     .buttonBack {
-      // border: 1px dotted red;
       background: #000428; /* fallback for old browsers */
       background: -webkit-linear-gradient(
         to left bottom,
@@ -185,6 +181,63 @@
       }
       &:hover:after {
         transform: translateX(180px) rotate(20deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .bookContent {
+    .wrapperOnList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .bookContentWrapper {
+    height: calc(100vh - 90px);
+  }
+}
+
+@media (max-width: 500px) {
+  .bookContentWrapper {
+    .bookContent {
+      width: 94%;
+      height: 95%;
+    }
+  }
+
+  .bookContent {
+    .bookTitle {
+      padding: 0 10px;
+      font-size: 28px;
+    }
+    .bookAuthor {
+      font-size: 20px;
+    }
+    .pageWrapper {
+      width: 100%;
+      font-size: 14px;
+    }
+    .lcLink {
+      border-radius: 10px;
+      p {
+        font-size: 14px;
+      }
+
+      img {
+        width: 60%;
+      }
+    }
+
+    .wrapperOnList {
+      .listCheck {
+        height: 36px;
+        width: 130px;
+        font-size: 12px;
       }
     }
   }

@@ -1,0 +1,20 @@
+@import "../../../styles/settings.scss";
+.bookStars {
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    margin: 0 10px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .bookStars {
+    flex-wrap: wrap;
+
+    img {
+      height: 20px;
+    }
+  }
+}
