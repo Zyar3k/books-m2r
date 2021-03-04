@@ -124,6 +124,7 @@
     align-items: center;
     width: 60%;
     justify-content: space-between;
+    position: relative;
     .myInfoWrapper {
       height: 60px;
       width: 160px;
@@ -167,6 +168,7 @@
       width: 120px;
 
       cursor: pointer;
+      position: relative;
 
       &:after {
         width: 30px;
@@ -180,7 +182,7 @@
         transition: transform 0.4s;
       }
       &:hover:after {
-        transform: translateX(180px) rotate(20deg);
+        transform: translateX(200px) rotate(20deg);
       }
     }
   }

@@ -54,7 +54,12 @@ const BookContent = ({ book }) => {
             <span>{timeCounter(page)}</span>
           </h4>
         </div>
-        <a className={styles.lcLink} href={link}>
+        <a
+          className={styles.lcLink}
+          href={link}
+          target='_blank'
+          rel='noreferrer'
+        >
           <p>Opis:</p>
           <img src={lcLogo} alt='lubimyczytac_logo' />
         </a>
