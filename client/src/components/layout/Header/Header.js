@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+
+import { StoreContext } from "../../../store/StoreProvider";
+
 import BurgerMenu from "../../features/BurgerMenu/BurgerMenu";
 import ListFilter from "../../features/ListFilter/ListFilter";
+import BrandBar from "../../features/BrandBar/BrandBar";
 
 import styles from "./Header.module.scss";
 
 const Header = () => {
+  const { isExtension } = useContext(StoreContext);
   const [click, setClick] = useState(false);
 
   const mobileMenuToggle = () => setClick(!click);
@@ -27,7 +32,12 @@ const Header = () => {
               : `${styles.navWrapper}`
           }
         >
-          <ListFilter closeMobileMenu={closeMobileMenu} />
+          {/* setIsExtension */}
+          {isExtension ? (
+            <BrandBar />
+          ) : (
+            <ListFilter closeMobileMenu={closeMobileMenu} />
+          )}
         </ul>
         <BurgerMenu mobileMenuToggle={mobileMenuToggle} toggleMen={click} />
       </div>

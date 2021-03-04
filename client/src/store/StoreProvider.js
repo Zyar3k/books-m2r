@@ -8,10 +8,11 @@ const StoreProvider = ({ children }) => {
   const [books, setBooks] = useState([]);
   const [select, setSelect] = useState("all");
   const [isPageShow, setIsPageShow] = useState(false);
-  // const [isReaded, setIsReaded] = useState();
+  const [isExtension, setIsExtension] = useState(false);
 
   const fetchData = async () => {
     const { data } = await request.get("/books");
+
     setBooks(data);
   };
 
@@ -27,6 +28,8 @@ const StoreProvider = ({ children }) => {
         setSelect,
         isPageShow,
         setIsPageShow,
+        isExtension,
+        setIsExtension,
         // isReaded,
         // setIsReaded,
       }}

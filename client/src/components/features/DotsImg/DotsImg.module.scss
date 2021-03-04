@@ -1,0 +1,24 @@
+.bgdImg {
+  position: fixed;
+  top: 8%;
+  right: 1%;
+  height: 400px;
+  opacity: 1;
+  animation: rotate 20s linear infinite;
+}
+
+@media (max-width: 767px) {
+  .bgdImg {
+    top: 15%;
+    height: 240px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

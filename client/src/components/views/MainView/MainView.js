@@ -1,4 +1,5 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 import { StoreContext } from "../../../store/StoreProvider";
 import BookList from "../../features/BookList/BookList";
@@ -6,7 +7,19 @@ import BookList from "../../features/BookList/BookList";
 import styles from "./MainView.modules.scss";
 
 const MainView = () => {
-  let { books, select } = useContext(StoreContext);
+  let { books, select, setIsExtension } = useContext(StoreContext);
+  const history = useHistory();
+  const currPath = history.location.pathname.slice(0, 6);
+
+  const checkState = () => {
+    if (currPath === "/") {
+      setIsExtension(false);
+    }
+  };
+
+  useEffect(() => {
+    checkState();
+  }, []);
 
   const bookList = () => {
     switch (select) {
