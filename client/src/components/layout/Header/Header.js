@@ -13,13 +13,13 @@ const Header = () => {
   return (
     <header>
       <div className={styles.header}>
-        <div className={styles.logoWrapper}>
+        <a href='/' className={styles.logoWrapper}>
           <p>
             MUST
             <span>2</span>
             READ
           </p>
-        </div>
+        </a>
         <ul
           className={
             click

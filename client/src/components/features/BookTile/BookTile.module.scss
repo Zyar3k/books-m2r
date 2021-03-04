@@ -30,9 +30,34 @@
   border-radius: 8px;
 
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 
   text-align: center;
+
+  .bookMain {
+    height: 100%;
+    width: 90%;
+    // border: 1px solid red;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bookMoreInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+    height: 100%;
+    width: 10%;
+    color: $fontLightColor;
+    font-size: 30px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
 }

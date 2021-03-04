@@ -39,6 +39,8 @@ header {
       height: 100%;
       width: 240px;
       font-family: $logo-font;
+      color: $fontLightColor;
+      text-decoration: none;
 
       display: flex;
       justify-content: center;
@@ -49,7 +51,8 @@ header {
       p {
         transition: all ease 0.4s;
         span {
-          text-shadow: 0 0 12px $fontLighterColor;
+          text-shadow: 0 0 4px $fontLightColor, 0 0 14px $fontLightColor,
+            0 0 20px $fontLightColor;
           color: #fff;
           padding: 0 4px;
         }
