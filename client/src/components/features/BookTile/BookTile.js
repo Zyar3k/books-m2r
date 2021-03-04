@@ -22,8 +22,6 @@ const BookTile = ({ books }) => {
     // gan,
     // pozy,
   } = books;
-  // const name = author.name;
-  // const lastName = author.lastName;
 
   return (
     <article className={styles.bookTile}>

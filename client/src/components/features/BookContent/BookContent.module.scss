@@ -1,1 +1,191 @@
 @import "../../../styles/settings.scss";
+
+.bookContentWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .bookContent {
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+
+    background: #000428; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right bottom,
+      #004e92,
+      #000428
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right bottom,
+      rgba(0, 78, 146, 0.5),
+      rgba(0, 4, 40, 0.5)
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    box-shadow: -2px -2px 4px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.bookContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: $fontLighterColor;
+  padding: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  .stars {
+    // border: 1px dotted red;
+  }
+
+  .bookTitle {
+    // border: 1px dotted red;
+    letter-spacing: 4px;
+    padding: 0 14px;
+
+    font-size: 40px;
+    color: $fontLightColor;
+  }
+  .bookAuthor {
+    // border: 1px dotted red;
+    font-size: 26px;
+  }
+  .pageWrapper {
+    // border: 1px dotted red;
+    display: flex;
+    width: 60%;
+    h4 {
+      width: 50%;
+      padding: 10px 4px;
+      // border: 1px dotted red;
+      span {
+        margin-left: 10px;
+        letter-spacing: 4px;
+        color: $fontLightColor;
+      }
+    }
+  }
+  .lcLink {
+    padding: 14px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+    p {
+      color: $fontLightColor;
+      margin-bottom: 10px;
+    }
+
+    &:after {
+      width: 30px;
+      height: 130%;
+      position: absolute;
+      left: -80px;
+      top: -15px;
+      content: "";
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: rotate(20deg);
+      transition: transform 0.4s;
+    }
+    &:hover:after {
+      transform: translateX(420px) rotate(20deg);
+    }
+  }
+
+  .wrapperOnList {
+    // border: 1px dotted red;
+    display: flex;
+
+    .listCheck {
+      // border: 1px dotted red;
+      height: 50px;
+      width: 146px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.1);
+
+      &.trueCheck {
+        color: $fontLightColor;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .bottomWrapper {
+    // border: 1px dotted red;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+    .myInfoWrapper {
+      // border: 1px dotted red;
+      height: 60px;
+      width: 160px;
+      display: flex;
+      justify-content: space-between;
+      .readedImg,
+      .availableImg {
+        height: 100%;
+        opacity: 0.2;
+
+        &.true {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .buttonBack {
+      // border: 1px dotted red;
+      background: #000428; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to left bottom,
+        #004e92,
+        #000428
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to left bottom,
+        rgba(0, 78, 146, 0.5),
+        rgba(0, 4, 40, 0.5)
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
+
+      color: $fontLightColor;
+      padding: 6px;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+
+      height: 50px;
+      width: 120px;
+
+      cursor: pointer;
+
+      &:after {
+        width: 30px;
+        height: 140%;
+        position: absolute;
+        left: -40px;
+        top: -10px;
+        content: "";
+        background-color: rgba(255, 255, 255, 0.3);
+        transform: rotate(20deg);
+        transition: transform 0.4s;
+      }
+      &:hover:after {
+        transform: translateX(180px) rotate(20deg);
+      }
+    }
+  }
+}
