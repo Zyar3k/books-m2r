@@ -1,7 +1,3 @@
-import { useContext } from "react";
-
-import { StoreContext } from "../../../store/StoreProvider";
-
 import lcLogo from "../../../images/lc-logo.png";
 import amaLogo from "../../../images/amazon-logo.png";
 import bbcLogo from "../../../images/bbc.png";
@@ -12,10 +8,6 @@ import pozyLogo from "../../../images/pozy.png";
 import styles from "./BrandBar.module.scss";
 
 const BrandBar = ({ closeMobileMenu }) => {
-  // const { setSelect } = useContext(StoreContext);
-  // const handleBookFilter = (option) => {
-  //   setSelect(option);
-  // };
   return (
     <>
       <li onClick={closeMobileMenu} className={styles.navItem}>

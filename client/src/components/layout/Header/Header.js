@@ -34,7 +34,7 @@ const Header = () => {
         >
           {/* setIsExtension */}
           {isExtension ? (
-            <BrandBar />
+            <BrandBar closeMobileMenu={closeMobileMenu} />
           ) : (
             <ListFilter closeMobileMenu={closeMobileMenu} />
           )}

@@ -19,6 +19,7 @@ const MainView = () => {
 
   useEffect(() => {
     checkState();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const bookList = () => {

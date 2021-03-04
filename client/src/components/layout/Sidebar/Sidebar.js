@@ -7,6 +7,7 @@ import { StoreContext } from "../../../store/StoreProvider";
 import styles from "./Sidebar.module.scss";
 
 import StaticBackImg from "../../features/StaticBackImg/StaticBackImg";
+import StatsModule from "../../features/StatsModule/StatsModule";
 
 const Sidebar = () => {
   const { isExtension } = useContext(StoreContext);
@@ -15,7 +16,10 @@ const Sidebar = () => {
     <aside>
       <div className={styles.sidebar}>
         <StaticBackImg />
-        {isExtension ? null : (
+
+        {isExtension ? (
+          <StatsModule />
+        ) : (
           <>
             <SortList />
             <FilterModule />
