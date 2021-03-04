@@ -27,7 +27,9 @@ const FilterModule = () => {
   };
   return (
     <section>
-      <h3 onClick={showFilters}>Dodatkowe filtry{moreFilters ? ":" : null}</h3>
+      <h3 className={styles.moduleTitle} onClick={showFilters}>
+        Dodatkowe filtry{moreFilters ? ":" : null}
+      </h3>
       {moreFilters ? (
         <>
           <div className={styles.filtrRow}>

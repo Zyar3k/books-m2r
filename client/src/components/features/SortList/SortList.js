@@ -59,7 +59,9 @@ const SortList = () => {
 
   return (
     <div className={styles.filterIsOn}>
-      <h3 onClick={showSortModule}>Sortowanie{isSortModule ? ":" : null}</h3>
+      <h3 onClick={showSortModule} className={styles.moduleTitle}>
+        Sortowanie{isSortModule ? ":" : null}
+      </h3>
       {isSortModule ? (
         <>
           <div className={styles.filtrWrapper}>
