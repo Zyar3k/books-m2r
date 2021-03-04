@@ -135,10 +135,10 @@
       .readedImg,
       .availableImg {
         height: 100%;
-        opacity: 0.2;
+        opacity: 0.1;
 
         &.true {
-          opacity: 0.8;
+          opacity: 0.5;
         }
       }
     }

@@ -14,8 +14,22 @@ const BookContent = ({ book }) => {
     page,
     readed,
     available,
+    ama,
+    bbc,
+    emp,
+    gan,
+    pozy,
   } = book;
   const history = useHistory();
+
+  // Szacowany przelicznik: 200 słów na minutę, czyli 1 strona na 1 minutę czytania.
+  function timeCounter(params) {
+    let page = params;
+    let hours = Math.floor(page / 60);
+    let minutes = page % 60;
+    params = ` ${hours}h: ${minutes}m`;
+    return params;
+  }
 
   const backToList = () => {
     history.goBack();
@@ -35,7 +49,7 @@ const BookContent = ({ book }) => {
           </h4>
           <h4>
             Czas czytania:
-            <span>14h34m</span>
+            <span>{timeCounter(page)}</span>
           </h4>
         </div>
         <a className={styles.lcLink} href={link}>
@@ -43,20 +57,72 @@ const BookContent = ({ book }) => {
           <img src={lcLogo} alt='lubimyczytac_logo' />
         </a>
         <div className={styles.wrapperOnList}>
-          <div className={`${styles.listCheck} ${styles.trueCheck}`}>
+          <div
+            className={
+              ama
+                ? `${styles.listCheck} ${styles.trueCheck}`
+                : `${styles.listCheck}`
+            }
+          >
             Amazon
           </div>
-          <div className={styles.listCheck}>BBC</div>
-          <div className={styles.listCheck}>Empik</div>
-          <div className={styles.listCheck}>Gandalf</div>
-          <div className={styles.listCheck}>
+          <div
+            className={
+              bbc
+                ? `${styles.listCheck} ${styles.trueCheck}`
+                : `${styles.listCheck}`
+            }
+          >
+            BBC
+          </div>
+          <div
+            className={
+              emp
+                ? `${styles.listCheck} ${styles.trueCheck}`
+                : `${styles.listCheck}`
+            }
+          >
+            Empik
+          </div>
+          <div
+            className={
+              gan
+                ? `${styles.listCheck} ${styles.trueCheck}`
+                : `${styles.listCheck}`
+            }
+          >
+            Gandalf
+          </div>
+          <div
+            className={
+              pozy
+                ? `${styles.listCheck} ${styles.trueCheck}`
+                : `${styles.listCheck}`
+            }
+          >
             Pozycje <br /> obowiązkowe
           </div>
         </div>
         <div className={styles.bottomWrapper}>
           <div className={styles.myInfoWrapper}>
-            <img className={styles.readedImg} src={imgRead} alt='readed' />
-            <img className={styles.availableImg} src={imgAva} alt='available' />
+            <img
+              className={
+                readed
+                  ? `${styles.readedImg} ${styles.true}`
+                  : `${styles.readedImg}`
+              }
+              src={imgRead}
+              alt='readed'
+            />
+            <img
+              className={
+                available
+                  ? `${styles.availableImg} ${styles.true}`
+                  : `${styles.availableImg}`
+              }
+              src={imgAva}
+              alt='available'
+            />
           </div>
           <button className={styles.buttonBack} onClick={backToList}>
             Powrót do listy
