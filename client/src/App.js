@@ -7,12 +7,14 @@ import MainView from "./components/views/MainView/MainView";
 import BookExtension from "./components/views/BookExtension/BookExtension";
 
 import StoreProvider from "./store/StoreProvider";
+import DynamicBgdImg from "./components/features/DynamicBgdImg/DynamicBgdImg";
 
 const App = () => {
   return (
     <StoreProvider>
       <Header />
       <div className='contentContainer'>
+        <DynamicBgdImg />
         <Sidebar />
         <Switch>
           <Route exact path='/' component={MainView} />

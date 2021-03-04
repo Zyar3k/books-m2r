@@ -15,7 +15,7 @@ section {
   .filtrRow {
     width: 100%;
     padding: 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid $fontLightColor;
 
     .radioGroup {
       justify-content: space-between;
@@ -41,20 +41,20 @@ section {
 
         input {
           display: none;
-          background: red;
         }
 
         .newInput {
           position: absolute;
           width: 24px;
           height: 24px;
-          border: 2px solid white;
+          border: 2px solid $fontLighterColor;
+          cursor: pointer;
 
           &::after {
             content: "";
             width: 12px;
             height: 12px;
-            background: white;
+            background: $fontLighterColor;
             position: absolute;
             top: 50%;
             left: 50%;

@@ -11,7 +11,11 @@
     display: flex;
     justify-content: center;
     align-self: center;
-    border: 1px dotter red;
+    border: 1px dotter $fontLighterColor;
+
+    &:hover .radioLabel {
+      color: #fff;
+    }
 
     .radioInput {
       display: flex;
@@ -24,7 +28,7 @@
         height: 0;
 
         &:focus + .radioControl {
-          box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em red;
+          box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em $fontLighterColor;
         }
       }
     }
@@ -34,7 +38,7 @@
       width: 1em;
       height: 1em;
       border-radius: 50%;
-      border: 0.1em solid red;
+      border: 0.1em solid $fontLighterColor;
       transform: translateY(-0.05em);
     }
 
@@ -42,7 +46,6 @@
       line-height: 1;
       transition: 180ms all ease-in-out;
       opacity: 0.8;
-      border: 1px dotter red;
       display: flex;
       justify-content: center;
       align-self: center;
@@ -67,7 +70,7 @@
       content: "";
       width: 0.5em;
       height: 0.5em;
-      box-shadow: inset 0.5em 0.5em red;
+      box-shadow: inset 0.5em 0.5em $fontLighterColor;
       border-radius: 50%;
       transition: 180ms transform ease-in-out;
       transform: scale(0);

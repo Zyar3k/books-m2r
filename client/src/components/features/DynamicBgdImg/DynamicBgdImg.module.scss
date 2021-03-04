@@ -1,0 +1,18 @@
+@import "../../../styles/settings.scss";
+
+.bgdImg {
+  position: absolute;
+  height: 140px;
+  bottom: 7%;
+  left: 0%;
+  animation: movingDown 15s linear infinite;
+}
+
+@keyframes movingDown {
+  from {
+    transform: translateX(-30vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}

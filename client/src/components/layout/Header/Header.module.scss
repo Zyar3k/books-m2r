@@ -2,7 +2,7 @@
 
 header {
   width: 100vw;
-  color: rgba(255, 255, 255, 0.7);
+  color: $fontLightColor;
 
   background: #000428; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -44,11 +44,20 @@ header {
       justify-content: center;
       align-items: center;
       font-size: 30px;
+      cursor: pointer;
+
       p {
-        text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+        transition: all ease 0.4s;
         span {
-          text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
-          color: red;
+          text-shadow: 0 0 12px $fontLighterColor;
+          color: #fff;
+          padding: 0 4px;
+        }
+      }
+
+      &:hover {
+        p {
+          color: #fff;
         }
       }
     }
@@ -85,6 +94,22 @@ header {
         position: absolute;
         top: 60px;
         background-color: black;
+
+        background: #000428; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #004e92,
+          #000428
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          rgba(0, 78, 146, 0.8),
+          rgba(0, 4, 40, 0.8)
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
         height: calc(100vh - 90px);
         z-index: 10000;
 
