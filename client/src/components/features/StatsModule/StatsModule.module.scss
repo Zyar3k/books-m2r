@@ -18,3 +18,26 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .statsModule {
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+
+    .listWrapper {
+      margin-bottom: 10px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid $fontLighterColor;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      h3 {
+        padding-bottom: 3px;
+      }
+      p {
+        padding: 2px 0;
+      }
+    }
+  }
+}
