@@ -7,6 +7,10 @@ section {
     cursor: pointer;
     transition: all ease 0.4s;
 
+    .chev {
+      display: none;
+    }
+
     &:hover {
       letter-spacing: 1px;
     }
@@ -69,3 +73,25 @@ section {
     }
   }
 }
+
+@media (max-width: 992px) {
+  section {
+    background: #000428; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to left,
+      #004e92,
+      #000428
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to left,
+      rgba(0, 78, 146, 0.9),
+      rgba(0, 4, 40, 0.9)
+    );
+    .moduleTitle {
+      .chev {
+        margin-left: 10px;
+        display: inline-flex;
+      }
+    }
+  }
+} ;

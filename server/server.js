@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use("/", bookRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Hello, m2r API");
+});
+
 mongoose.connect(process.env.DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

@@ -9,6 +9,8 @@ const FilterModule = () => {
   const [isReaded, setIsReaded] = useState(false);
   const [isAvailable, setIsAvailable] = useState(false);
   const [moreFilters, setMoreFilters] = useState(false);
+  const [toggleIcon, setToggleIcon] = useState(false);
+
   const handleBookFilter = (option) => {
     if (option === "readed") {
       setIsReaded("Przeczytane");
@@ -22,6 +24,10 @@ const FilterModule = () => {
     setSelect(option);
   };
 
+  const handleToggleIcon = () => {
+    setToggleIcon(!toggleIcon);
+  };
+
   const showFilters = () => {
     setMoreFilters(!moreFilters);
   };
@@ -29,6 +35,12 @@ const FilterModule = () => {
     <section>
       <h3 className={styles.moduleTitle} onClick={showFilters}>
         Dodatkowe filtry{moreFilters ? ":" : null}
+        <span
+          onClick={handleToggleIcon}
+          className={`${styles.chev} ${
+            toggleIcon ? "fas fa-chevron-down" : "fas fa-chevron-up"
+          }`}
+        ></span>
       </h3>
       {moreFilters ? (
         <>

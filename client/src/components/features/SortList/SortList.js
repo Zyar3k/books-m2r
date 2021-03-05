@@ -7,6 +7,7 @@ import styles from "./SortList.module.scss";
 const SortList = () => {
   const { books, setBooks, setIsPageShow } = useContext(StoreContext);
   const [isSortModule, setisSortModule] = useState(false);
+  const [toggleIcon, setToggleIcon] = useState(false);
 
   const showSortModule = () => {
     setisSortModule(!isSortModule);
@@ -57,10 +58,20 @@ const SortList = () => {
     setIsPageShow(false);
   };
 
+  const handleToggleIcon = () => {
+    setToggleIcon(!toggleIcon);
+  };
+
   return (
     <div className={styles.filterIsOn}>
       <h3 onClick={showSortModule} className={styles.moduleTitle}>
         Sortowanie{isSortModule ? ":" : null}
+        <span
+          onClick={handleToggleIcon}
+          className={`${styles.chev} ${
+            toggleIcon ? "fas fa-chevron-down" : "fas fa-chevron-up"
+          }`}
+        ></span>
       </h3>
       {isSortModule ? (
         <>
