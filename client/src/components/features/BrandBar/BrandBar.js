@@ -7,6 +7,16 @@ import pozyLogo from "../../../images/pozy.png";
 
 import styles from "./BrandBar.module.scss";
 
+/*
+https://lubimyczytac.pl/
+https://www.amazon.pl/
+https://www.bbc.com/
+https://www.empik.com/
+https://www.gandalf.com.pl/
+http://www.pozycjeobowiazkowe.pl/
+
+*/
+
 const BrandBar = ({ closeMobileMenu }) => {
   return (
     <>
