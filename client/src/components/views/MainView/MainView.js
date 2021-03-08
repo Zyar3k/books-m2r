@@ -4,7 +4,7 @@ import { useHistory } from "react-router-dom";
 import { StoreContext } from "../../../store/StoreProvider";
 import BookList from "../../features/BookList/BookList";
 
-import styles from "./MainView.modules.scss";
+import styles from "./MainView.module.scss";
 
 const MainView = () => {
   let { books, select, setIsExtension } = useContext(StoreContext);

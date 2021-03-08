@@ -11,16 +11,7 @@ const BookTile = ({ books }) => {
     _id,
     author: { name, lastName },
     title,
-    // key,
-    // link,
     page,
-    // readed,
-    // available,
-    // ama,
-    // bbc,
-    // emp,
-    // gan,
-    // pozy,
   } = books;
 
   return (
@@ -35,9 +26,6 @@ const BookTile = ({ books }) => {
           </strong>
         </em>
       </div>
-      {/* <Link to={`book/${_id}`} className={styles.bookMoreInfo}>
-        <i className='fas fa-info'></i>
-      </Link> */}
     </Link>
   );
 };

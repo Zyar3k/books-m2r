@@ -1,6 +1,7 @@
 import BackImg from "../BackImg/BackImg";
 import BookTile from "../BookTile/BookTile";
 import Loader from "../Loader/Loader";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 import styles from "./BookList.module.scss";
 
@@ -17,6 +18,7 @@ const BookList = ({ books }) => {
           ))}
         </>
       )}
+      <ScrollToTop />
     </section>
   );
 };

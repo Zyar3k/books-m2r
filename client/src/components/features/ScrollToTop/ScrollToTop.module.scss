@@ -1,0 +1,41 @@
+@import "../../../styles/settings.scss";
+
+.scrollToTop {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 78, 146, 0.8);
+  color: #fff;
+  z-index: 1;
+  box-shadow: 0 0 8px $fontLighterColor;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    font-size: 20px;
+    font-weight: bold;
+    animation: scrollTop 0.5s alternate ease infinite;
+  }
+}
+@keyframes scrollTop {
+  from {
+    transform: translateY(2px);
+  }
+  to {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 992px) {
+  .scrollToTop {
+    right: 20px;
+    transform: unset;
+    left: unset;
+  }
+}
