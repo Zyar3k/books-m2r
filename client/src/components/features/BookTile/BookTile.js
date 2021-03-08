@@ -24,7 +24,7 @@ const BookTile = ({ books }) => {
   } = books;
 
   return (
-    <article className={styles.bookTile}>
+    <Link to={`book/${_id}`} className={styles.bookTile}>
       <div className={styles.bookMain}>
         <h3 className={styles.bookTitle}>{title}</h3>
         <em className={styles.bookAuthor}>
@@ -35,10 +35,10 @@ const BookTile = ({ books }) => {
           </strong>
         </em>
       </div>
-      <Link to={`book/${_id}`} className={styles.bookMoreInfo}>
+      {/* <Link to={`book/${_id}`} className={styles.bookMoreInfo}>
         <i className='fas fa-info'></i>
-      </Link>
-    </article>
+      </Link> */}
+    </Link>
   );
 };
 
