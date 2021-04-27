@@ -1,0 +1,13 @@
+@import "../../../styles/settings.scss";
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $fontLightColor;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+}

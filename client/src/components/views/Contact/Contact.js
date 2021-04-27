@@ -4,7 +4,17 @@ import styles from "./Contact.module.scss";
 const Contact = () => {
   return (
     <main className={styles.main}>
-      <form className={styles.form}>
+      <form
+        className={styles.form}
+        action='https://formsubmit.io/send/a.zygan@onet.eu'
+        method='POST'
+      >
+        <input
+          name='_redirect'
+          type='hidden'
+          id='name'
+          value='https://must2read.netlify.app/thank-you'
+        ></input>
         <label className={styles.label} htmlFor='name'>
           Twoje imię
         </label>
@@ -29,6 +39,11 @@ const Contact = () => {
           E-mail (opcjonalnie)
         </label>
         <input type='mail' id='mail' placeholder='Twój e-mail' />
+        <input
+          name='_formsubmit_id'
+          type='text'
+          style={{ display: "none" }}
+        ></input>
         <span className={styles.btnWrapper}>
           <button type='submit'>Wyślij</button>
         </span>
