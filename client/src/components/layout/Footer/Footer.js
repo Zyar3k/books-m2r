@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { StoreContext } from "../../../store/StoreProvider";
 
@@ -70,7 +71,9 @@ const Footer = () => {
             <span>Masz uwagi?</span>
             Napisz:
           </p>
-          <i className='fas fa-envelope'></i>
+          <Link to='/contact'>
+            <i className='fas fa-envelope'></i>
+          </Link>
         </div>
       </div>
     </footer>

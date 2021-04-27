@@ -1,6 +1,5 @@
-import { useHistory } from "react-router-dom";
-
 import StarRanking from "../StarRanking/StarRanking";
+import ButtonBack from "../../common/ButtonBack/ButtonBack";
 
 import lcLogo from "../../../images/lc-logo.png";
 import imgRead from "../../../images/read-svg-png.png";
@@ -22,7 +21,6 @@ const BookContent = ({ book }) => {
     gan,
     pozy,
   } = book;
-  const history = useHistory();
 
   // Szacowany przelicznik: 200 słów na minutę, czyli 1 strona na 1 minutę czytania.
   function timeCounter(params) {
@@ -33,9 +31,6 @@ const BookContent = ({ book }) => {
     return params;
   }
 
-  const backToList = () => {
-    history.goBack();
-  };
   return (
     <div className={styles.bookContentWrapper}>
       <div className={styles.bookContent}>
@@ -131,9 +126,7 @@ const BookContent = ({ book }) => {
               alt='available'
             />
           </div>
-          <button className={styles.buttonBack} onClick={backToList}>
-            Powrót do listy
-          </button>
+          <ButtonBack>Wróć do listy</ButtonBack>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import Footer from "./components/layout/Footer/Footer";
 import Sidebar from "./components/layout/Sidebar/Sidebar";
 import MainView from "./components/views/MainView/MainView";
 import BookExtension from "./components/views/BookExtension/BookExtension";
+import Contact from "./components/views/Contact/Contact";
 
 import StoreProvider from "./store/StoreProvider";
 import DynamicBgdImg from "./components/features/DynamicBgdImg/DynamicBgdImg";
@@ -19,6 +20,7 @@ const App = () => {
         <Switch>
           <Route exact path='/' component={MainView} />
           <Route path='/book/:id' component={BookExtension} />
+          <Route path='/contact' component={Contact} />
         </Switch>
       </div>
       <Footer />
