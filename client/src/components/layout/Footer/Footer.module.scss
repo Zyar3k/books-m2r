@@ -52,6 +52,11 @@ footer {
 
       i {
         margin-left: 10px;
+        color: $fontLightColor;
+
+        &:hover {
+          text-shadow: 0 0 4px $fontLightColor;
+        }
       }
     }
   }

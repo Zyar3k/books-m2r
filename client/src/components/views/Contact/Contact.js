@@ -31,7 +31,6 @@ const Contact = () => {
           type='text'
           name='msg'
           id='msg'
-          cols='60'
           rows='5'
           placeholder='Wpisz wiadomość'
         />
