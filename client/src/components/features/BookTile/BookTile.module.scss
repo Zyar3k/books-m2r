@@ -36,6 +36,8 @@
   text-align: center;
   text-decoration: none;
 
+  overflow: hidden;
+
   .bookMain {
     height: 100%;
     width: 100%;
@@ -44,6 +46,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  &:after {
+    width: 30px;
+    height: 140%;
+    position: absolute;
+    left: -50px;
+    top: -10px;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: rotate(20deg);
+    transition: transform 0.4s;
+  }
+  &:hover:after {
+    transform: translateX(540px) rotate(20deg);
   }
 }
 
