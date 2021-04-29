@@ -3,7 +3,6 @@
 header {
   width: 100vw;
   color: $fontLightColor;
-
   background: #000428; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to left,
@@ -15,12 +14,9 @@ header {
     rgba(0, 78, 146, 0.5),
     rgba(0, 4, 40, 0.5)
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-
   box-shadow: 0 1px 4px rgba(255, 255, 255, 0.2);
-
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +28,6 @@ header {
     height: 60px;
     margin: 0 auto;
     max-width: 1280px;
-
     display: flex;
 
     .logoWrapper {
@@ -41,7 +36,6 @@ header {
       font-family: $logo-font;
       color: $fontLightColor;
       text-decoration: none;
-
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,6 +44,7 @@ header {
 
       p {
         transition: all ease 0.4s;
+
         span {
           text-shadow: 0 0 4px $fontLightColor, 0 0 14px $fontLightColor,
             0 0 20px $fontLightColor;
@@ -79,25 +74,17 @@ header {
       height: 60px;
       margin: 0 auto;
       max-width: 1280px;
-
       display: flex;
-
-      .logoWrapper {
-      }
 
       .navWrapper {
         flex-direction: column;
         width: 70%;
-        justify-content: space-evenly;
-
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
-
         position: absolute;
         top: 60px;
         background-color: black;
-
         background: #000428; /* fallback for old browsers */
         background: -webkit-linear-gradient(
           to right,
@@ -109,10 +96,8 @@ header {
           rgba(0, 78, 146, 0.8),
           rgba(0, 4, 40, 0.8)
         ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-
         height: calc(100vh - 90px);
         z-index: 10000;
 

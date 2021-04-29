@@ -5,6 +5,8 @@
   height: 400px;
   opacity: 1;
   animation: rotate 20s linear infinite;
+
+  filter: blur(2px);
 }
 
 @media (max-width: 767px) {

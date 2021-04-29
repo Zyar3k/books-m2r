@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 
 import { StoreContext } from "../../../store/StoreProvider";
 
-import BurgerMenu from "../../features/BurgerMenu/BurgerMenu";
+import BurgerMenu from "../../common/BurgerMenu/BurgerMenu";
 import ListFilter from "../../features/ListFilter/ListFilter";
 import BrandBar from "../../features/BrandBar/BrandBar";
 

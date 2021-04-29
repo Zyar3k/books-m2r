@@ -38,7 +38,11 @@ const Contact = () => {
           E-mail (opcjonalnie)
         </label>
         <input type='mail' id='mail' placeholder='Twój e-mail' />
-        {/* <input
+
+        {/*
+        // this input blocks spam
+        // If any value provided for this field, formsubmit will reject the submission. The input should be hidden.
+        <input
           name='_formsubmit_id'
           type='text'
           style={{ display: "none" }}

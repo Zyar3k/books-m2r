@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import BookContent from "../../features/BookContent/BookContent";
-import DotsImg from "../../features/DotsImg/DotsImg";
+import DotsImg from "../../common/DotsImg/DotsImg";
 
 import { StoreContext } from "../../../store/StoreProvider";
 

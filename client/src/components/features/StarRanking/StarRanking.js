@@ -23,7 +23,6 @@ const StarRanking = ({ book }) => {
 
   useEffect(() => {
     countingStars();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return <div className={styles.bookStars}>{renderEle}</div>;
 };

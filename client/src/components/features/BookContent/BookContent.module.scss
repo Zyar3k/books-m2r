@@ -47,13 +47,14 @@
 
     font-size: 40px;
     color: $fontLightColor;
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
   }
   .bookAuthor {
     font-size: 26px;
   }
   .pageWrapper {
     display: flex;
-    width: 60%;
+    width: 80%;
 
     align-items: center;
     h4 {
@@ -105,7 +106,6 @@
     .listCheck {
       height: 50px;
       width: 146px;
-
       display: flex;
       justify-content: center;
       align-items: center;
@@ -114,6 +114,7 @@
 
       &.trueCheck {
         color: $fontLightColor;
+        text-shadow: 0 0 4px $fontLightColor;
         font-weight: bold;
       }
     }
@@ -125,64 +126,21 @@
     width: 60%;
     justify-content: space-between;
     position: relative;
+
     .myInfoWrapper {
       height: 60px;
       width: 160px;
       display: flex;
       justify-content: space-between;
+
       .readedImg,
       .availableImg {
         height: 100%;
-        opacity: 0.1;
+        opacity: 0.05;
 
         &.true {
-          opacity: 0.5;
+          opacity: 0.8;
         }
-      }
-    }
-
-    .buttonBack {
-      background: #000428; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to left bottom,
-        #004e92,
-        #000428
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to left bottom,
-        rgba(0, 78, 146, 0.5),
-        rgba(0, 4, 40, 0.5)
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
-      box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
-
-      color: $fontLightColor;
-      padding: 6px;
-      border: none;
-      border-radius: 10px;
-      overflow: hidden;
-
-      height: 50px;
-      width: 120px;
-
-      cursor: pointer;
-      position: relative;
-
-      &:after {
-        width: 30px;
-        height: 140%;
-        position: absolute;
-        left: -40px;
-        top: -10px;
-        content: "";
-        background-color: rgba(255, 255, 255, 0.3);
-        transform: rotate(20deg);
-        transition: transform 0.4s;
-      }
-      &:hover:after {
-        transform: translateX(200px) rotate(20deg);
       }
     }
   }

@@ -9,7 +9,7 @@ import Contact from "./components/views/Contact/Contact";
 import ThankYou from "./components/views/ThankYou/ThankYou";
 
 import StoreProvider from "./store/StoreProvider";
-import DynamicBgdImg from "./components/features/DynamicBgdImg/DynamicBgdImg";
+import DynamicBgdImg from "./components/common/DynamicBgdImg/DynamicBgdImg";
 
 const App = () => {
   return (

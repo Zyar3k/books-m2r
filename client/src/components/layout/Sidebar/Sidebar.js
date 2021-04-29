@@ -6,7 +6,7 @@ import { StoreContext } from "../../../store/StoreProvider";
 
 import styles from "./Sidebar.module.scss";
 
-import StaticBackImg from "../../features/StaticBackImg/StaticBackImg";
+import StaticBackImg from "../../common/StaticBackImg/StaticBackImg";
 import StatsModule from "../../features/StatsModule/StatsModule";
 
 const Sidebar = () => {

@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import { StoreContext } from "../../../store/StoreProvider";
 import BookList from "../../features/BookList/BookList";
+import BackImg from "../../common/BackImg/BackImg";
 
 import styles from "./MainView.module.scss";
 
@@ -60,6 +61,7 @@ const MainView = () => {
 
   return (
     <main>
+      <BackImg />
       <div className={styles.mainView}>{bookList()}</div>
     </main>
   );

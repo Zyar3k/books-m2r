@@ -4,6 +4,8 @@
   right: 10%;
   height: 400px;
   opacity: 0.5;
+
+  filter: blur(3px);
 }
 
 @media (max-width: 767px) {

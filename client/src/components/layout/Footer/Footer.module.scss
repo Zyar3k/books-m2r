@@ -23,18 +23,17 @@ footer {
 
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-
   box-shadow: 0 -1px 4px rgba(255, 255, 255, 0.2);
 
   .filterIsOn {
     display: none;
   }
+
   .footer {
     height: 30px;
     padding: 0 10px;
     margin: 0 auto;
     max-width: 1280px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,7 +68,6 @@ footer {
       padding: 0;
       display: flex;
       justify-content: center;
-      // background: rgba(26, 26, 26, 0.9);
       background: #000428; /* fallback for old browsers */
       background: -webkit-linear-gradient(
         to left,
@@ -92,10 +90,8 @@ footer {
     }
     .footer {
       height: 30px;
-      // padding: 0 10px;
       margin: 0 auto;
       max-width: 1280px;
-
       display: flex;
       align-items: center;
       justify-content: space-between;
