@@ -8,10 +8,16 @@ import BackImg from "../../common/BackImg/BackImg";
 import styles from "./MainView.module.scss";
 
 const MainView = () => {
-  let { books, select, setIsExtension } = useContext(StoreContext);
+  let {
+    books,
+    selectedBooks,
+    setSelectedBooks,
+    select,
+    setIsExtension,
+  } = useContext(StoreContext);
   const history = useHistory();
   const currPath = history.location.pathname.slice(0, 6);
-
+  console.log("selectedBooks", selectedBooks.length);
   const checkState = () => {
     if (currPath === "/") {
       setIsExtension(false);
@@ -24,38 +30,28 @@ const MainView = () => {
   }, []);
 
   const bookList = () => {
+    if (selectedBooks.length === 0) {
+      console.log("dupa");
+      setSelectedBooks(books);
+    } else {
+      setSelectedBooks(selectedBooks);
+    }
+
     switch (select) {
-      case "all":
-        return <BookList books={books} />;
-      case "ama":
-        books = books.filter((book) => book.ama === true);
-        return <BookList books={books} />;
-      case "bbc":
-        books = books.filter((book) => book.bbc === true);
-        return <BookList books={books} />;
-      case "emp":
-        books = books.filter((book) => book.emp === true);
-        return <BookList books={books} />;
-      case "gan":
-        books = books.filter((book) => book.bbc === true);
-        return <BookList books={books} />;
-      case "pozy":
-        books = books.filter((book) => book.pozy === true);
-        return <BookList books={books} />;
       case "readed":
-        books = books.filter((book) => book.readed === true);
-        return <BookList books={books} />;
+        selectedBooks = selectedBooks.filter((book) => book.readed === true);
+        return <BookList books={selectedBooks} />;
       case "unreaded":
-        books = books.filter((book) => book.readed !== true);
-        return <BookList books={books} />;
+        selectedBooks = selectedBooks.filter((book) => book.readed !== true);
+        return <BookList books={selectedBooks} />;
       case "available":
-        books = books.filter((book) => book.available === true);
-        return <BookList books={books} />;
+        selectedBooks = selectedBooks.filter((book) => book.available === true);
+        return <BookList books={selectedBooks} />;
       case "unavailable":
-        books = books.filter((book) => book.available !== true);
-        return <BookList books={books} />;
+        selectedBooks = selectedBooks.filter((book) => book.available !== true);
+        return <BookList books={selectedBooks} />;
       default:
-        break;
+        return <BookList books={selectedBooks} />;
     }
   };
 

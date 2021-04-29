@@ -5,10 +5,10 @@ import { StoreContext } from "../../../store/StoreProvider";
 import styles from "./ListFilter.module.scss";
 
 const ListFilter = ({ closeMobileMenu }) => {
-  const { setSelect } = useContext(StoreContext);
-  const handleBookFilter = (option) => {
-    setSelect(option);
-  };
+  const { ama, bbc, emp, gan, pozy, setSelectedBooks, books } = useContext(
+    StoreContext
+  );
+
   return (
     <>
       <li onClick={closeMobileMenu} className={styles.navItem}>
@@ -22,7 +22,7 @@ const ListFilter = ({ closeMobileMenu }) => {
               name='listSelect'
               id='all'
               defaultChecked
-              onClick={() => handleBookFilter("all")}
+              onClick={() => setSelectedBooks(books)}
             />
             <span className={styles.radioControl}></span>
           </span>
@@ -39,7 +39,7 @@ const ListFilter = ({ closeMobileMenu }) => {
               type='radio'
               name='listSelect'
               id='ama'
-              onClick={() => handleBookFilter("ama")}
+              onClick={() => setSelectedBooks(ama)}
             />
             <span className={styles.radioControl}></span>
           </span>
@@ -56,7 +56,7 @@ const ListFilter = ({ closeMobileMenu }) => {
               type='radio'
               name='listSelect'
               id='bbc'
-              onClick={() => handleBookFilter("bbc")}
+              onClick={() => setSelectedBooks(bbc)}
             />
             <span className={styles.radioControl}></span>
           </span>
@@ -73,7 +73,7 @@ const ListFilter = ({ closeMobileMenu }) => {
               type='radio'
               name='listSelect'
               id='emp'
-              onClick={() => handleBookFilter("emp")}
+              onClick={() => setSelectedBooks(emp)}
             />
             <span className={styles.radioControl}></span>
           </span>
@@ -90,7 +90,7 @@ const ListFilter = ({ closeMobileMenu }) => {
               type='radio'
               name='listSelect'
               id='gan'
-              onClick={() => handleBookFilter("gan")}
+              onClick={() => setSelectedBooks(gan)}
             />
             <span className={styles.radioControl}></span>
           </span>
@@ -107,7 +107,7 @@ const ListFilter = ({ closeMobileMenu }) => {
               type='radio'
               name='listSelect'
               id='pozy'
-              onClick={() => handleBookFilter("pozy")}
+              onClick={() => setSelectedBooks(pozy)}
             />
             <span className={styles.radioControl}></span>
           </span>

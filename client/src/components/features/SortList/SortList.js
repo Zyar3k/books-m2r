@@ -5,7 +5,9 @@ import { StoreContext } from "../../../store/StoreProvider";
 import styles from "./SortList.module.scss";
 
 const SortList = () => {
-  const { books, setBooks, setIsPageShow } = useContext(StoreContext);
+  const { setIsPageShow, selectedBooks, setSelectedBooks } = useContext(
+    StoreContext
+  );
   const [isSortModule, setisSortModule] = useState(false);
   const [toggleIcon, setToggleIcon] = useState(false);
 
@@ -15,22 +17,22 @@ const SortList = () => {
 
   const sortByPage = (e) => {
     if (e.target.value === "up") {
-      const sorted = [...books].sort((a, b) => {
+      const sorted = [...selectedBooks].sort((a, b) => {
         return a.page - b.page;
       });
-      setBooks(sorted);
+      setSelectedBooks(sorted);
     } else if (e.target.value === "down") {
-      const sorted = [...books].sort((a, b) => {
+      const sorted = [...selectedBooks].sort((a, b) => {
         return b.page - a.page;
       });
-      setBooks(sorted);
+      setSelectedBooks(sorted);
     }
     setIsPageShow(true);
   };
 
   const sortByAuthor = (e) => {
     if (e.target.value === "up") {
-      const sorted = [...books].sort((a, b) => {
+      const sorted = [...selectedBooks].sort((a, b) => {
         if (e.target.name === "lastName") {
           a = a.author.lastName;
           b = b.author.lastName;
@@ -40,9 +42,9 @@ const SortList = () => {
         }
         return a.localeCompare(b);
       });
-      setBooks(sorted);
+      setSelectedBooks(sorted);
     } else if (e.target.value === "down") {
-      const sorted = [...books].sort((a, b) => {
+      const sorted = [...selectedBooks].sort((a, b) => {
         if (e.target.name === "lastName") {
           a = a.author.lastName;
           b = b.author.lastName;
@@ -53,7 +55,7 @@ const SortList = () => {
 
         return b.localeCompare(a);
       });
-      setBooks(sorted);
+      setSelectedBooks(sorted);
     }
     setIsPageShow(false);
   };

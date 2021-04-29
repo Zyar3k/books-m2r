@@ -14,6 +14,7 @@ const StoreProvider = ({ children }) => {
   const [emp, setEmp] = useState([]);
   const [gan, setGan] = useState([]);
   const [pozy, setPozy] = useState([]);
+  const [selectedBooks, setSelectedBooks] = useState([]);
 
   const fetchData = async () => {
     const { data } = await request.get("/books");
@@ -68,6 +69,8 @@ const StoreProvider = ({ children }) => {
         setGan,
         pozy,
         setPozy,
+        selectedBooks,
+        setSelectedBooks,
       }}
     >
       {children}

@@ -35,6 +35,7 @@
   text-align: center;
   text-decoration: none;
 
+  z-index: 1;
   overflow: hidden;
 
   .bookMain {
@@ -47,19 +48,19 @@
     align-items: center;
   }
 
-  &:after {
+  &:before {
     width: 30px;
     height: 140%;
-    position: absolute;
-    left: -50px;
-    top: -10px;
+    // position: absolute;
+    // top: -10px;
+    // left: -550px;
     content: "";
     background-color: rgba(255, 255, 255, 0.3);
-    transform: rotate(20deg);
+    transform: translateX(-50px) rotate(20deg);
     transition: transform 0.4s;
   }
-  &:hover:after {
-    transform: translateX(680px) rotate(20deg);
+  &:hover:before {
+    transform: translateX(500px) rotate(20deg);
   }
 }
 
