@@ -16,11 +16,12 @@ const StoreProvider = ({ children }) => {
   const [pozy, setPozy] = useState([]);
   const [selectedBooks, setSelectedBooks] = useState([]);
   const [error, setError] = useState(false);
+  const [status, setStatus] = useState();
 
   const fetchData = async () => {
     try {
-      const { data } = await request.get("/books");
-
+      const { data, status } = await request.get("/books");
+      setStatus(status);
       data.forEach((book) => {
         if (book.ama) {
           ama.push(book);
@@ -46,8 +47,10 @@ const StoreProvider = ({ children }) => {
 
       setBooks(data);
     } catch (error) {
-      console.log(error.message);
-      setError(true);
+      console.log(error);
+
+      setError(false);
+      console.log(error.status);
     }
   };
 
@@ -80,6 +83,8 @@ const StoreProvider = ({ children }) => {
         setSelectedBooks,
         error,
         setError,
+        status,
+        setStatus,
       }}
     >
       {children}
