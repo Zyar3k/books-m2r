@@ -5,13 +5,11 @@ import { StoreContext } from "../../../store/StoreProvider";
 import styles from "./FilterModule.module.scss";
 
 const FilterModule = () => {
-  const { setSelect, books } = useContext(StoreContext);
+  const { setSelect } = useContext(StoreContext);
   const [isReaded, setIsReaded] = useState(false);
   const [isAvailable, setIsAvailable] = useState(false);
   const [moreFilters, setMoreFilters] = useState(false);
   const [toggleIcon, setToggleIcon] = useState(false);
-
-  console.log(books);
 
   const handleBookFilter = (option) => {
     if (option === "readed") {

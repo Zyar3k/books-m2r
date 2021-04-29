@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { StoreContext } from "../../../store/StoreProvider";
 import BookList from "../../features/BookList/BookList";
 import BackImg from "../../common/BackImg/BackImg";
+import Info from "../../common/Info/Info";
 
 import styles from "./MainView.module.scss";
 
@@ -14,10 +15,10 @@ const MainView = () => {
     setSelectedBooks,
     select,
     setIsExtension,
+    error,
   } = useContext(StoreContext);
   const history = useHistory();
   const currPath = history.location.pathname.slice(0, 6);
-  console.log("selectedBooks", selectedBooks.length);
   const checkState = () => {
     if (currPath === "/") {
       setIsExtension(false);
@@ -31,7 +32,6 @@ const MainView = () => {
 
   const bookList = () => {
     if (selectedBooks.length === 0) {
-      console.log("dupa");
       setSelectedBooks(books);
     } else {
       setSelectedBooks(selectedBooks);
@@ -58,7 +58,14 @@ const MainView = () => {
   return (
     <main>
       <BackImg />
-      <div className={styles.mainView}>{bookList()}</div>
+      {error ? (
+        <Info>
+          <p>Upsss... coś poszło nie tak</p>
+          <p>Brak danych do wyświetlenia</p>
+        </Info>
+      ) : (
+        <div className={styles.mainView}>{bookList()}</div>
+      )}
     </main>
   );
 };

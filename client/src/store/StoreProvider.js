@@ -15,33 +15,40 @@ const StoreProvider = ({ children }) => {
   const [gan, setGan] = useState([]);
   const [pozy, setPozy] = useState([]);
   const [selectedBooks, setSelectedBooks] = useState([]);
+  const [error, setError] = useState(false);
 
   const fetchData = async () => {
-    const { data } = await request.get("/books");
-    data.forEach((book) => {
-      if (book.ama) {
-        ama.push(book);
-        setAma(ama);
-      }
-      if (book.bbc) {
-        bbc.push(book);
-        setBbc(bbc);
-      }
-      if (book.emp) {
-        emp.push(book);
-        setEmp(emp);
-      }
-      if (book.gan) {
-        gan.push(book);
-        setGan(gan);
-      }
-      if (book.pozy) {
-        pozy.push(book);
-        setPozy(pozy);
-      }
-    });
+    try {
+      const { data } = await request.get("/books");
 
-    setBooks(data);
+      data.forEach((book) => {
+        if (book.ama) {
+          ama.push(book);
+          setAma(ama);
+        }
+        if (book.bbc) {
+          bbc.push(book);
+          setBbc(bbc);
+        }
+        if (book.emp) {
+          emp.push(book);
+          setEmp(emp);
+        }
+        if (book.gan) {
+          gan.push(book);
+          setGan(gan);
+        }
+        if (book.pozy) {
+          pozy.push(book);
+          setPozy(pozy);
+        }
+      });
+
+      setBooks(data);
+    } catch (error) {
+      console.log(error.message);
+      setError(true);
+    }
   };
 
   useEffect(() => {
@@ -71,6 +78,8 @@ const StoreProvider = ({ children }) => {
         setPozy,
         selectedBooks,
         setSelectedBooks,
+        error,
+        setError,
       }}
     >
       {children}
