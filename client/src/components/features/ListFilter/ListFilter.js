@@ -5,9 +5,16 @@ import { StoreContext } from "../../../store/StoreProvider";
 import styles from "./ListFilter.module.scss";
 
 const ListFilter = ({ closeMobileMenu }) => {
-  const { ama, bbc, emp, gan, pozy, setSelectedBooks, books } = useContext(
-    StoreContext
-  );
+  const {
+    ama,
+    bbc,
+    emp,
+    gan,
+    pozy,
+    selectedBooks,
+    setSelectedBooks,
+    books,
+  } = useContext(StoreContext);
 
   return (
     <>
@@ -21,7 +28,8 @@ const ListFilter = ({ closeMobileMenu }) => {
               type='radio'
               name='listSelect'
               id='all'
-              defaultChecked
+              readOnly
+              checked={true ? selectedBooks === books : false}
               onClick={() => setSelectedBooks(books)}
             />
             <span className={styles.radioControl}></span>

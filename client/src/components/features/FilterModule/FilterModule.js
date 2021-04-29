@@ -5,7 +5,9 @@ import { StoreContext } from "../../../store/StoreProvider";
 import styles from "./FilterModule.module.scss";
 
 const FilterModule = () => {
-  const { setSelect } = useContext(StoreContext);
+  const { setSelect, selectedBooks, setSelectedBooks, books } = useContext(
+    StoreContext
+  );
   const [isReaded, setIsReaded] = useState(false);
   const [isAvailable, setIsAvailable] = useState(false);
   const [moreFilters, setMoreFilters] = useState(false);
@@ -48,7 +50,9 @@ const FilterModule = () => {
             <div className={`${styles.radioGroup} ${styles.fullList}`}>
               <label className={styles.radio}>
                 <input
-                  onClick={() => handleBookFilter("all")}
+                  onClick={() => setSelectedBooks(books)}
+                  readOnly
+                  checked={true ? selectedBooks === books : false}
                   type='radio'
                   name='readedFiltr'
                 />
