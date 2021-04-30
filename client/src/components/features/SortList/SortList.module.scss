@@ -39,6 +39,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      &:hover {
+        border-color: #fff;
+        color: #fff;
+      }
     }
   }
 }
