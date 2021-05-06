@@ -76,6 +76,9 @@ section {
         input[type="radio"]:checked ~ .newInput::after {
           transform: translate(-50%, -50%) scale(1);
         }
+        input[type="checkbox"]:checked ~ .newInput::after {
+          transform: translate(-50%, -50%) scale(1);
+        }
       }
     }
   }

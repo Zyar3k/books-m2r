@@ -53,7 +53,7 @@ const FilterModule = () => {
                   onClick={() => setSelectedBooks(books)}
                   readOnly
                   checked={true ? selectedBooks === books : false}
-                  type='radio'
+                  type='checkbox'
                   name='readedFiltr'
                 />
                 <span className={styles.newInput}></span>
