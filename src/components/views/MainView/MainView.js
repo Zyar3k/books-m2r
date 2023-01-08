@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import { StoreContext } from "../../../store/StoreProvider";
 import BookList from "../../features/BookList/BookList";
@@ -17,8 +17,8 @@ const MainView = () => {
     setIsExtension,
     error,
   } = useContext(StoreContext);
-  const history = useHistory();
-  const currPath = history.location.pathname.slice(0, 6);
+  const location = useLocation();
+  const currPath = location.pathname;
   const checkState = () => {
     if (currPath === "/") {
       setIsExtension(false);

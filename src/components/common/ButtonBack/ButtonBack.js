@@ -1,12 +1,11 @@
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import styles from "./ButtonBack.module.scss";
 
 const ButtonBack = ({ children }) => {
-  const history = useHistory();
-  const backToList = () => {
-    history.goBack();
-  };
+  const navigate = useNavigate();
+
+  const backToList = () => navigate(-1);
   return (
     <button className={styles.buttonBack} onClick={backToList}>
       {children}

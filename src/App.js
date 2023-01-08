@@ -1,4 +1,4 @@
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/layout/Header/Header";
 import Footer from "./components/layout/Footer/Footer";
@@ -15,15 +15,15 @@ const App = () => {
   return (
     <StoreProvider>
       <Header />
-      <div className='contentContainer'>
+      <div className="contentContainer">
         <DynamicBgdImg />
         <Sidebar />
-        <Switch>
-          <Route exact path='/' component={MainView} />
-          <Route path='/book/:id' component={BookExtension} />
-          <Route path='/contact' component={Contact} />
-          <Route path='/thank-you' component={ThankYou} />
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<MainView />} />
+          <Route path="/book/:id" element={<BookExtension />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/thank-you" element={<ThankYou />} />
+        </Routes>
       </div>
       <Footer />
     </StoreProvider>

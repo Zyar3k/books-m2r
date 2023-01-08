@@ -20,31 +20,31 @@ const StoreProvider = ({ children }) => {
 
   const fetchData = async () => {
     try {
-      const { data, status } = await request.get("/books");
+      const { data, status } = await request.get("/");
+      console.log(data);
       setStatus(status);
-      data.forEach((book) => {
-        if (book.ama) {
-          ama.push(book);
-          setAma(ama);
-        }
-        if (book.bbc) {
-          bbc.push(book);
-          setBbc(bbc);
-        }
-        if (book.emp) {
-          emp.push(book);
-          setEmp(emp);
-        }
-        if (book.gan) {
-          gan.push(book);
-          setGan(gan);
-        }
-        if (book.pozy) {
-          pozy.push(book);
-          setPozy(pozy);
-        }
-      });
-
+      // data.forEach((book) => {
+      //   if (book.ama) {
+      //     ama.push(book);
+      //     setAma(ama);
+      //   }
+      //   if (book.bbc) {
+      //     bbc.push(book);
+      //     setBbc(bbc);
+      //   }
+      //   if (book.emp) {
+      //     emp.push(book);
+      //     setEmp(emp);
+      //   }
+      //   if (book.gan) {
+      //     gan.push(book);
+      //     setGan(gan);
+      //   }
+      //   if (book.pozy) {
+      //     pozy.push(book);
+      //     setPozy(pozy);
+      //   }
+      // });
       setBooks(data);
     } catch (error) {
       console.log(error);
