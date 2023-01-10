@@ -11,34 +11,12 @@
 - axios
 - node-sass
 
-## Backend
-##### Used in project
-- cors
-- express
-- mongoose
-- nodemon
-
 
 ### Installation
 
 To run app
 
 ```sh
-cd books-m2r
-npm i / yarn install
-npm start / yarn start
-```
-To run client
-```sh
-cd books-m2r
-cd client
-npm i / yarn install
-npm start / yarn start
-```
-To run server
-```sh
-cd books-m2r
-cd server
 npm i / yarn install
 npm start / yarn start
 ```
